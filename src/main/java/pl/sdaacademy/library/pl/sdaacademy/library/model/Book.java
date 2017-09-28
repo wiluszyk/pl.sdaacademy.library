@@ -35,4 +35,10 @@ public class Book extends BaseEntity {
     @Column(name = "isLoan")
     @NotEmpty
     private boolean isLoan;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private BookType type;
+
+
 }
