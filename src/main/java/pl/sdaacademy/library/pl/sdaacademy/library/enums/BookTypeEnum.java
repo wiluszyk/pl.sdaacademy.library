@@ -1,0 +1,8 @@
+package pl.sdaacademy.library.pl.sdaacademy.library.enums;
+
+public enum BookTypeEnum {
+
+    SCIENCE_FICTION, DRAMA, ROMANCE, HORROR, SCIENCE, GUIDE, TRAVEL, HISTORY, FANTASY,
+    AUTOBIOGRAPHIES, DIARIES, POETRY, CHILDRENS, HEALTH, ACTION_AND_ADVENTURE, SATIRE
+
+}

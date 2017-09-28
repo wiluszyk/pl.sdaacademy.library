@@ -11,19 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    @Column(name = "name")
-    @NotEmpty
-    private String name;
-
-    @Column(name = "surname")
-    @NotEmpty
-    private String surname;
+public class User extends NameEntity{
 
     @Column(name = "voivodeship")
     @NotEmpty
@@ -50,29 +38,6 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Book> books;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
 
     public String getVoivodeship() {
         return voivodeship;
